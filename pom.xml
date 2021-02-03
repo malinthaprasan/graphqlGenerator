@@ -16,16 +16,43 @@
 	<description>wso2 devportal GraphQL</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<start-class>org.wso2.carbon.apimgt.devportal.graphql.Wso2DevportalGraphQlApplication</start-class>
 	</properties>
 	<dependencies>
+
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-cbor</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>5.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-tools</artifactId>
+			<version>5.2.4</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-webflux</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -64,39 +91,22 @@
 			<version>1.11</version>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jersey</artifactId>
-			<version>1.2.0.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-cbor</artifactId>
-			<version>2.11.2</version>
-		</dependency>
 	</dependencies>
+
 
 
 	<build>
 		<plugins>
-<!--			<plugin>-->
-<!--				<groupId>org.springframework.boot</groupId>-->
-<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -118,8 +128,8 @@
 					</execution>
 				</executions>
 				<configuration>
-										<mode>server</mode>
-					<!--					//<generateJPAAnnotation>true</generateJPAAnnotation>-->
+					<mode>server</mode>
+					<generateJPAAnnotation>true</generateJPAAnnotation>
 					<javaTypeForIDType>java.lang.String</javaTypeForIDType>
 					<packageName>org.wso2.carbon.apimgt.graphql.api.devportal.gql</packageName>
 					<scanBasePackages>org.wso2.carbon.apimgt.graphql.api.devportal.gql</scanBasePackages>
@@ -155,21 +165,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<goals>-->
-<!--							<goal>repackage</goal>-->
-<!--						</goals>-->
 						<configuration>
-<!--							<classifier>spring-boot</classifier>-->
 							<mainClass>
-								org.wso2.carbon.apimgt.devportal.graphql.Wso2DevportalGraphQlApplication
+<!--								org.wso2.carbon.apimgt.devportal.graphql.Wso2DevportalGraphQlApplication-->
+								org.wso2.carbon.apimgt.graphql.api.devportal.gql.GraphQLServerMain
 							</mainClass>
 						</configuration>
-<!--					</execution>-->
-<!--				</executions>-->
 			</plugin>
 		</plugins>
 	</build>
+
+<!--	<properties>-->
+<!--		<start-class>org.wso2.carbon.apimgt.devportal.graphql.Wso2DevportalGraphQlApplication</start-class>-->
+<!--	</properties>-->
 
 </project>

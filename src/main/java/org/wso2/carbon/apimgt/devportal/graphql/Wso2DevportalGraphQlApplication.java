@@ -6,10 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 
-@SpringBootApplication(scanBasePackages = { "org.wso2.carbon.apimgt.devportal.graphql", "com.graphql_java_generator" ,
-		"org.wso2.carbon.apimgt.devportal.graphql" })
-@EntityScan(basePackages = { "org.wso2.carbon.apimgt.graphql.api.devportal.gql", "com.graphql_java_generator" ,"org.wso2.carbon.apimgt.graphql.api.devportal.gql" })
+//@SpringBootApplication(scanBasePackages = { "org.wso2.carbon.apimgt.devportal.graphql", "com.graphql_java_generator" ,
+//		"org.wso2.carbon.apimgt.devportal.graphql" })
+//@EntityScan(basePackages = { "org.wso2.carbon.apimgt.graphql.api.devportal.gql", "com.graphql_java_generator" ,"org.wso2.carbon.apimgt.graphql.api.devportal.gql" })
 @EnableConfigurationProperties
+@SpringBootApplication
 public class Wso2DevportalGraphQlApplication {
 
 	public static void main(String[] args) {
