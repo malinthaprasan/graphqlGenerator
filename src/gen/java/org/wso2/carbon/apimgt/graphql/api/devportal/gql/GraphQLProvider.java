@@ -141,21 +141,21 @@ public class GraphQLProvider {
 			.type(newTypeWiring("Api").dataFetcher("ingressUrl", graphQLDataFetchers.dataFetchersDelegateApiIngressUrl()))
 			.type(newTypeWiring("Api").dataFetcher("advertiseInfo", graphQLDataFetchers.dataFetchersDelegateApiAdvertiseInfo()))
 			// Data fetchers for DataFetchersDelegateLabel
-			.type(newTypeWiring("Label").dataFetcher("labelDetails", graphQLDataFetchers.dataFetchersDelegateLabelLabelDetails()))
+//			.type(newTypeWiring("Label").dataFetcher("labelDetails", graphQLDataFetchers.dataFetchersDelegateLabelLabelDetails()))
 			// Data fetchers for DataFetchersDelegateIngressUrl
-			.type(newTypeWiring("IngressUrl").dataFetcher("clusterDetails", graphQLDataFetchers.dataFetchersDelegateIngressUrlClusterDetails()))
-			// Data fetchers for DataFetchersDelegateTier
-			.type(newTypeWiring("Tier").dataFetcher("tierDetails", graphQLDataFetchers.dataFetchersDelegateTierTierDetails()))
-			// Data fetchers for DataFetchersDelegateAPIEndpointURLsDTO
-			.type(newTypeWiring("APIEndpointURLsDTO").dataFetcher("urLs", graphQLDataFetchers.dataFetchersDelegateAPIEndpointURLsDTOUrLs()))
-			.type(newTypeWiring("APIEndpointURLsDTO").dataFetcher("defaultUrls", graphQLDataFetchers.dataFetchersDelegateAPIEndpointURLsDTODefaultUrls()))
-			// Data fetchers for DataFetchersDelegateApiListing
-			.type(newTypeWiring("ApiListing").dataFetcher("getAllapis", graphQLDataFetchers.dataFetchersDelegateApiListingGetAllapis()))
-			.type(newTypeWiring("ApiListing").dataFetcher("pagination", graphQLDataFetchers.dataFetchersDelegateApiListingPagination()))
-			// Data fetchers for DataFetchersDelegateQuery
+//			.type(newTypeWiring("IngressUrl").dataFetcher("clusterDetails", graphQLDataFetchers.dataFetchersDelegateIngressUrlClusterDetails()))
+//			// Data fetchers for DataFetchersDelegateTier
+//			.type(newTypeWiring("Tier").dataFetcher("tierDetails", graphQLDataFetchers.dataFetchersDelegateTierTierDetails()))
+//			// Data fetchers for DataFetchersDelegateAPIEndpointURLsDTO
+//			.type(newTypeWiring("APIEndpointURLsDTO").dataFetcher("urLs", graphQLDataFetchers.dataFetchersDelegateAPIEndpointURLsDTOUrLs()))
+//			.type(newTypeWiring("APIEndpointURLsDTO").dataFetcher("defaultUrls", graphQLDataFetchers.dataFetchersDelegateAPIEndpointURLsDTODefaultUrls()))
+//			// Data fetchers for DataFetchersDelegateApiListing
+//			.type(newTypeWiring("ApiListing").dataFetcher("getAllapis", graphQLDataFetchers.dataFetchersDelegateApiListingGetAllapis()))
+//			.type(newTypeWiring("ApiListing").dataFetcher("pagination", graphQLDataFetchers.dataFetchersDelegateApiListingPagination()))
+//			// Data fetchers for DataFetchersDelegateQuery
 			.type(newTypeWiring("Query").dataFetcher("getApiListing", graphQLDataFetchers.dataFetchersDelegateQueryGetApiListing()))
 			.type(newTypeWiring("Query").dataFetcher("getApi", graphQLDataFetchers.dataFetchersDelegateQueryGetApi()))
-			.type(newTypeWiring("Query").dataFetcher("getTags", graphQLDataFetchers.dataFetchersDelegateQueryGetTags()))
+//			.type(newTypeWiring("Query").dataFetcher("getTags", graphQLDataFetchers.dataFetchersDelegateQueryGetTags()))
 			.build();
 	}
 

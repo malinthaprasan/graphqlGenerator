@@ -82,7 +82,6 @@
 			<groupId>com.graphql-java</groupId>
 			<artifactId>graphql-java</artifactId>
 			<version>15.0</version>
-
 		</dependency>
 
 		<dependency>
@@ -116,26 +115,26 @@
 				</configuration>
 
 			</plugin>
-			<plugin>
-				<groupId>com.graphql-java-generator</groupId>
-				<artifactId>graphql-maven-plugin</artifactId>
-				<version>1.11</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generateServerCode</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<mode>server</mode>
-					<generateJPAAnnotation>true</generateJPAAnnotation>
-					<javaTypeForIDType>java.lang.String</javaTypeForIDType>
-					<packageName>org.wso2.carbon.apimgt.graphql.api.devportal.gql</packageName>
-					<scanBasePackages>org.wso2.carbon.apimgt.graphql.api.devportal.gql</scanBasePackages>
-					<targetSourceFolder>../src/gen/java</targetSourceFolder>
-				</configuration>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>com.graphql-java-generator</groupId>-->
+<!--				<artifactId>graphql-maven-plugin</artifactId>-->
+<!--				<version>1.11</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>generateServerCode</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<mode>server</mode>-->
+<!--					<generateJPAAnnotation>true</generateJPAAnnotation>-->
+<!--					<javaTypeForIDType>java.lang.String</javaTypeForIDType>-->
+<!--					<packageName>org.wso2.carbon.apimgt.graphql.api.devportal.gql</packageName>-->
+<!--					<scanBasePackages>org.wso2.carbon.apimgt.graphql.api.devportal.gql</scanBasePackages>-->
+<!--					<targetSourceFolder>../src/gen/java</targetSourceFolder>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -148,7 +147,7 @@
 						</goals>
 						<configuration>
 							<sources>
-<!--								<source>src/gen/java</source>-->
+								<source>src/gen/java</source>
 							</sources>
 						</configuration>
 					</execution>

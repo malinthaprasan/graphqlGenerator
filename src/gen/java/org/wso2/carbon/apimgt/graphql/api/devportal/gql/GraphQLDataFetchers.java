@@ -35,20 +35,20 @@ public class GraphQLDataFetchers {
 	@Resource
 	DataFetchersDelegateApi dataFetchersDelegateApi;
 
-	@Resource
-	DataFetchersDelegateLabel dataFetchersDelegateLabel;
+//	@Resource
+//	DataFetchersDelegateLabel dataFetchersDelegateLabel;
 
-	@Resource
-	DataFetchersDelegateIngressUrl dataFetchersDelegateIngressUrl;
-
-	@Resource
-	DataFetchersDelegateTier dataFetchersDelegateTier;
-
-	@Resource
-	DataFetchersDelegateAPIEndpointURLsDTO dataFetchersDelegateAPIEndpointURLsDTO;
-
-	@Resource
-	DataFetchersDelegateApiListing dataFetchersDelegateApiListing;
+//	@Resource
+//	DataFetchersDelegateIngressUrl dataFetchersDelegateIngressUrl;
+//
+//	@Resource
+//	DataFetchersDelegateTier dataFetchersDelegateTier;
+//
+//	@Resource
+//	DataFetchersDelegateAPIEndpointURLsDTO dataFetchersDelegateAPIEndpointURLsDTO;
+//
+//	@Resource
+//	DataFetchersDelegateApiListing dataFetchersDelegateApiListing;
 
 	@Resource
 	DataFetchersDelegateQuery dataFetchersDelegateQuery;
@@ -176,129 +176,129 @@ public class GraphQLDataFetchers {
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	// Data fetchers for DataFetchersDelegateLabel
 	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public DataFetcher<List<LabelDetails>> dataFetchersDelegateLabelLabelDetails() {
-		return dataFetchingEnvironment -> {
-  			Label source = dataFetchingEnvironment.getSource();
-
-			 List<LabelDetails> ret = dataFetchersDelegateLabel.labelDetails(dataFetchingEnvironment, source);
-			logger.debug("labelDetails: {} found rows", (ret==null) ? 0 : ret.size());
-
-			return ret;
-		};
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	// Data fetchers for DataFetchersDelegateIngressUrl
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public DataFetcher<List<DeploymentClusterInformation>> dataFetchersDelegateIngressUrlClusterDetails() {
-		return dataFetchingEnvironment -> {
-  			IngressUrl source = dataFetchingEnvironment.getSource();
-
-			 List<DeploymentClusterInformation> ret = dataFetchersDelegateIngressUrl.clusterDetails(dataFetchingEnvironment, source);
-			logger.debug("clusterDetails: {} found rows", (ret==null) ? 0 : ret.size());
-
-			return ret;
-		};
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	// Data fetchers for DataFetchersDelegateTier
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public DataFetcher<List<TierDetails>> dataFetchersDelegateTierTierDetails() {
-		return dataFetchingEnvironment -> {
-  			Tier source = dataFetchingEnvironment.getSource();
-
-			 List<TierDetails> ret = dataFetchersDelegateTier.tierDetails(dataFetchingEnvironment, source);
-			logger.debug("tierDetails: {} found rows", (ret==null) ? 0 : ret.size());
-
-			return ret;
-		};
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	// Data fetchers for DataFetchersDelegateAPIEndpointURLsDTO
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public DataFetcher<URL> dataFetchersDelegateAPIEndpointURLsDTOUrLs() {
-		return dataFetchingEnvironment -> {
-  			APIEndpointURLsDTO source = dataFetchingEnvironment.getSource();
-
-			URL ret = null;
-			try {
-				ret = dataFetchersDelegateAPIEndpointURLsDTO.urLs(dataFetchingEnvironment, source);
-			} catch (NoSuchElementException e) {
-				// There was no items in the Optional
-			}
-
-			if (ret != null)
-				logger.debug("urLs: 1 result found");
-			else
-				logger.debug("urLs: no result found");
-
-			return ret;
-		};
-	}
-
-
-	public DataFetcher<DefaultURL> dataFetchersDelegateAPIEndpointURLsDTODefaultUrls() {
-		return dataFetchingEnvironment -> {
-  			APIEndpointURLsDTO source = dataFetchingEnvironment.getSource();
-
-			DefaultURL ret = null;
-			try {
-				ret = dataFetchersDelegateAPIEndpointURLsDTO.defaultUrls(dataFetchingEnvironment, source);
-			} catch (NoSuchElementException e) {
-				// There was no items in the Optional
-			}
-
-			if (ret != null)
-				logger.debug("defaultUrls: 1 result found");
-			else
-				logger.debug("defaultUrls: no result found");
-
-			return ret;
-		};
-	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	// Data fetchers for DataFetchersDelegateApiListing
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public DataFetcher<List<Api>> dataFetchersDelegateApiListingGetAllapis() {
-		return dataFetchingEnvironment -> {
-  			ApiListing source = dataFetchingEnvironment.getSource();
-
-			 List<Api> ret = dataFetchersDelegateApiListing.getAllapis(dataFetchingEnvironment, source);
-			logger.debug("getAllapis: {} found rows", (ret==null) ? 0 : ret.size());
-
-			return ret;
-		};
-	}
-
-
-	public DataFetcher<Pagination> dataFetchersDelegateApiListingPagination() {
-		return dataFetchingEnvironment -> {
-  			ApiListing source = dataFetchingEnvironment.getSource();
-
-			Pagination ret = null;
-			try {
-				ret = dataFetchersDelegateApiListing.pagination(dataFetchingEnvironment, source);
-			} catch (NoSuchElementException e) {
-				// There was no items in the Optional
-			}
-
-			if (ret != null)
-				logger.debug("pagination: 1 result found");
-			else
-				logger.debug("pagination: no result found");
-
-			return ret;
-		};
-	}
-
+//
+//	public DataFetcher<List<LabelDetails>> dataFetchersDelegateLabelLabelDetails() {
+//		return dataFetchingEnvironment -> {
+//  			Label source = dataFetchingEnvironment.getSource();
+//
+//			 List<LabelDetails> ret = dataFetchersDelegateLabel.labelDetails(dataFetchingEnvironment, source);
+//			logger.debug("labelDetails: {} found rows", (ret==null) ? 0 : ret.size());
+//
+//			return ret;
+//		};
+//	}
+//
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//	// Data fetchers for DataFetchersDelegateIngressUrl
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	public DataFetcher<List<DeploymentClusterInformation>> dataFetchersDelegateIngressUrlClusterDetails() {
+//		return dataFetchingEnvironment -> {
+//  			IngressUrl source = dataFetchingEnvironment.getSource();
+//
+//			 List<DeploymentClusterInformation> ret = dataFetchersDelegateIngressUrl.clusterDetails(dataFetchingEnvironment, source);
+//			logger.debug("clusterDetails: {} found rows", (ret==null) ? 0 : ret.size());
+//
+//			return ret;
+//		};
+//	}
+//
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//	// Data fetchers for DataFetchersDelegateTier
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	public DataFetcher<List<TierDetails>> dataFetchersDelegateTierTierDetails() {
+//		return dataFetchingEnvironment -> {
+//  			Tier source = dataFetchingEnvironment.getSource();
+//
+//			 List<TierDetails> ret = dataFetchersDelegateTier.tierDetails(dataFetchingEnvironment, source);
+//			logger.debug("tierDetails: {} found rows", (ret==null) ? 0 : ret.size());
+//
+//			return ret;
+//		};
+//	}
+//
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//	// Data fetchers for DataFetchersDelegateAPIEndpointURLsDTO
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	public DataFetcher<URL> dataFetchersDelegateAPIEndpointURLsDTOUrLs() {
+//		return dataFetchingEnvironment -> {
+//  			APIEndpointURLsDTO source = dataFetchingEnvironment.getSource();
+//
+//			URL ret = null;
+//			try {
+//				ret = dataFetchersDelegateAPIEndpointURLsDTO.urLs(dataFetchingEnvironment, source);
+//			} catch (NoSuchElementException e) {
+//				// There was no items in the Optional
+//			}
+//
+//			if (ret != null)
+//				logger.debug("urLs: 1 result found");
+//			else
+//				logger.debug("urLs: no result found");
+//
+//			return ret;
+//		};
+//	}
+//
+//
+//	public DataFetcher<DefaultURL> dataFetchersDelegateAPIEndpointURLsDTODefaultUrls() {
+//		return dataFetchingEnvironment -> {
+//  			APIEndpointURLsDTO source = dataFetchingEnvironment.getSource();
+//
+//			DefaultURL ret = null;
+//			try {
+//				ret = dataFetchersDelegateAPIEndpointURLsDTO.defaultUrls(dataFetchingEnvironment, source);
+//			} catch (NoSuchElementException e) {
+//				// There was no items in the Optional
+//			}
+//
+//			if (ret != null)
+//				logger.debug("defaultUrls: 1 result found");
+//			else
+//				logger.debug("defaultUrls: no result found");
+//
+//			return ret;
+//		};
+//	}
+//
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//	// Data fetchers for DataFetchersDelegateApiListing
+//	////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	public DataFetcher<List<Api>> dataFetchersDelegateApiListingGetAllapis() {
+//		return dataFetchingEnvironment -> {
+//  			ApiListing source = dataFetchingEnvironment.getSource();
+//
+//			 List<Api> ret = dataFetchersDelegateApiListing.getAllapis(dataFetchingEnvironment, source);
+//			logger.debug("getAllapis: {} found rows", (ret==null) ? 0 : ret.size());
+//
+//			return ret;
+//		};
+//	}
+//
+//
+//	public DataFetcher<Pagination> dataFetchersDelegateApiListingPagination() {
+//		return dataFetchingEnvironment -> {
+//  			ApiListing source = dataFetchingEnvironment.getSource();
+//
+//			Pagination ret = null;
+//			try {
+//				ret = dataFetchersDelegateApiListing.pagination(dataFetchingEnvironment, source);
+//			} catch (NoSuchElementException e) {
+//				// There was no items in the Optional
+//			}
+//
+//			if (ret != null)
+//				logger.debug("pagination: 1 result found");
+//			else
+//				logger.debug("pagination: no result found");
+//
+//			return ret;
+//		};
+//	}
+//
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	// Data fetchers for DataFetchersDelegateQuery
 	////////////////////////////////////////////////////////////////////////////////////////////////
@@ -307,7 +307,7 @@ public class GraphQLDataFetchers {
 		return dataFetchingEnvironment -> {
 			Integer start = (Integer) graphqlUtils.getArgument(dataFetchingEnvironment.getArgument("start"), "${argument.type.graphQLTypeSimpleName}", "java.lang.String", Integer.class);
 			Integer offset = (Integer) graphqlUtils.getArgument(dataFetchingEnvironment.getArgument("offset"), "${argument.type.graphQLTypeSimpleName}", "java.lang.String", Integer.class);
-  
+
 			ApiListing ret = null;
 			try {
 				ret = dataFetchersDelegateQuery.getApiListing(dataFetchingEnvironment, start, offset);
@@ -328,7 +328,7 @@ public class GraphQLDataFetchers {
 	public DataFetcher<Api> dataFetchersDelegateQueryGetApi() {
 		return dataFetchingEnvironment -> {
 			String id = (String) graphqlUtils.getArgument(dataFetchingEnvironment.getArgument("id"), "${argument.type.graphQLTypeSimpleName}", "java.lang.String", String.class);
-  
+
 			Api ret = null;
 			try {
 				ret = dataFetchersDelegateQuery.getApi(dataFetchingEnvironment, id);
@@ -345,15 +345,15 @@ public class GraphQLDataFetchers {
 		};
 	}
 
-
-	public DataFetcher<List<Tag>> dataFetchersDelegateQueryGetTags() {
-		return dataFetchingEnvironment -> {
-  
-			 List<Tag> ret = dataFetchersDelegateQuery.getTags(dataFetchingEnvironment);
-			logger.debug("getTags: {} found rows", (ret==null) ? 0 : ret.size());
-
-			return ret;
-		};
-	}
+//
+//	public DataFetcher<List<Tag>> dataFetchersDelegateQueryGetTags() {
+//		return dataFetchingEnvironment -> {
+//
+//			 List<Tag> ret = dataFetchersDelegateQuery.getTags(dataFetchingEnvironment);
+//			logger.debug("getTags: {} found rows", (ret==null) ? 0 : ret.size());
+//
+//			return ret;
+//		};
+//	}
 
 }
